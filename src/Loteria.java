@@ -51,7 +51,7 @@ public class Loteria {
         numeros.forEach(System.out::print);
         System.out.println();
     }
-    //Codigo antiguo
+    //Codigo antiguo que repetia numeros
     /*public void bonoLoto() {
         for(int i=1; i<=6; i++) {
             int a=((int) (Math.random()*(49-1+1)+1));
