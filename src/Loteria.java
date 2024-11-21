@@ -4,26 +4,32 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class Loteria {
-    public static void main (String[] args){
+    public static void main (String[] args) {
         System.out.println("""
-        Bienvenido a la Lotería.
-        Por favor elige una opción:
-        1- BonoLoto.
-        2- Lotería.
-        """);
+                Bienvenido a la Lotería.
+                Por favor elige una opción:
+                1- BonoLoto.
+                2- Lotería.
+                Elige Opción, por favor:
+                """);
 
-        Scanner sc=new Scanner(System.in);
-        int a;
-        a=sc.nextInt();
-        switch (a){
-            case 1: bonoLoto();
-                break;
-            case 2: loteria();
-                break;
-            default: System.exit(0);
-                System.out.println("Opcion Incorrecta.");
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+
+        switch (a) {
+                case 1:
+                    bonoLoto();
+                    break;
+                case 2:
+                    loteria();
+                    break;
+                default:
+                    System.exit(0);
+                    System.out.println("Opcion Incorrecta.");
+            }
         }
-    }
+
     public static void bonoLoto() {
         Set<Integer> numeros = new HashSet<>();
         Random random = new Random();
