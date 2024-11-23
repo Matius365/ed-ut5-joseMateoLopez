@@ -10,6 +10,7 @@ public class Loteria {
                 Por favor elige una opción:
                 1- BonoLoto.
                 2- Lotería.
+                3- Salir.
                 Elige Opción, por favor:
                 """);
 
@@ -18,17 +19,20 @@ public class Loteria {
         int a = sc.nextInt();
 
         switch (a) {
-                case 1:
-                    bonoLoto();
-                    break;
-                case 2:
-                    loteria();
-                    break;
-                default:
-                    System.exit(0);
-                    System.out.println("Opcion Incorrecta.");
-            }
+            case 1:
+                bonoLoto();
+                break;
+            case 2:
+                loteria();
+                break;
+            case 3:
+                System.out.println("Saliendo del programa...");
+                break;
+            default:
+                System.exit(0);
+                System.out.println("Opcion Incorrecta.");
         }
+    }
 
     public static void bonoLoto() {
         Set<Integer> numeros = new HashSet<>();
